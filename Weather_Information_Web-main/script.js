@@ -1,3 +1,4 @@
+
 let searchBtn = document.getElementById("search");
 let city = "";
 
@@ -25,15 +26,19 @@ searchBtn.addEventListener("click", async (evt) => {
     let weather = document.getElementById("weather");
 
     let temp = document.getElementById("temp");
-    temp.innerHTML = "temp : " + info.temp + "&deg;C";
+    temp.innerHTML = "Temperature : " + info.temp + "&deg;C";
     let humidity = document.getElementById("humidity");
-    humidity.innerHTML = "humidity : " + info.humidity + "%";
+    humidity.innerHTML = " Humidity : " + info.humidity + "%";
     let tempMin = document.getElementById("tempMin");
-    tempMin.innerHTML = "tempMin : " + info.tempMin + "&deg;C";
+    tempMin.innerHTML = "Temperature-Low : " + info.tempMin + "&deg;C";
     let tempMax = document.getElementById("tempMax");
-    tempMax.innerHTML = "tempMax : " + info.tempMax + "&deg;C";
+    tempMax.innerHTML = "Temperature-High : " + info.tempMax + "&deg;C";
     let feelslike = document.getElementById("feelslike");
-    feelslike.innerHTML = "FeelLike : " + info.feelsLike + "&deg;C";
+    feelslike.innerHTML = " FeelLike : " + info.feelsLike + "&deg;C";
+
+
+
+
   } catch (e) {
     p.innerHTML = "No Such Place Exists!";
     p.style.color = "red";
